@@ -1,0 +1,24 @@
+extend type Query {
+    structureWebsites: [JSON!]! @pluginAllowed(short_name: "websites")
+}
+
+extend type Mutation {
+    updateStructureWebsite(id: ID!, payload: JSON!): JSON! @pluginAllowed(short_name: "websites")
+    applyStructureTemplate(input: StructureTemplateInput!): ApplyStructureTemplateResult! @pluginAllowed(short_name: "websites") @requireRole(role: "platform")
+}
+
+input StructureTemplateInput {
+    templateKey: String!
+    documents: [JSON!]!
+    targetField: String
+}
+
+type ApplyStructureTemplateResult {
+    templateKey: String!
+    targetField: String!
+    affectedClients: [String!]!
+    updatedDocuments: Int!
+    deletedDocuments: Int!
+    message: String!
+}
+
