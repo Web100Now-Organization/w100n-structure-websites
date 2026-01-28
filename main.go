@@ -14,8 +14,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"web100now-clients-platform/core/db"
-	"web100now-clients-platform/core/db/utils"
+	"w100n_backend_core/core/db"
+	"w100n_backend_core/core/db/utils"
 )
 
 // GetStructureWebsites loads all documents from the "structure_websites" collection

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"web100now-clients-platform/app/graph/model"
-	"web100now-clients-platform/core"
-	"web100now-clients-platform/core/db/utils"
-	"web100now-clients-platform/core/logger"
+	"w100n_backend_core/app/graph/model"
+	"w100n_backend_core/core"
+	"w100n_backend_core/core/db/utils"
+	"w100n_backend_core/core/logger"
 
 	"go.mongodb.org/mongo-driver/bson"
 )
